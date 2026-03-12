@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    students = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name,score])
+result = [x[1] for x in students]
+minimum = sorted(set(result))
+final = sorted([y[0] for y in students if y[1] == minimum[1]])
+[print(p) for p in final]
